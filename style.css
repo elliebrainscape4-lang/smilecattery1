@@ -1,0 +1,1817 @@
+/*==================================================
+ Smile Cattery at Lightwood
+ style.css
+ CLEAN VERSION - PART 1
+==================================================*/
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/*==================================================
+ROOT
+==================================================*/
+
+:root{
+
+    --green:#4f7557;
+    --green-dark:#35503c;
+    --green-light:#73937b;
+
+    --cream:#faf7f1;
+    --white:#ffffff;
+
+    --gold:#cba85a;
+
+    --text:#2d2d2d;
+    --grey:#6f6f6f;
+
+    --shadow:0 20px 50px rgba(0,0,0,.08);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
+
+}
+
+
+/*==================================================
+RESET
+==================================================*/
+
+*{
+
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Poppins",sans-serif;
+
+    background:var(--cream);
+
+    color:var(--text);
+
+    overflow-x:hidden;
+
+    line-height:1.7;
+
+}
+
+img{
+
+    display:block;
+
+    max-width:100%;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+button{
+
+    font-family:inherit;
+
+    cursor:pointer;
+
+    border:none;
+
+}
+
+
+/*==================================================
+LAYOUT
+==================================================*/
+
+.container{
+
+    width:min(92%,var(--max-width));
+
+    margin:auto;
+
+}
+
+.narrow{
+
+    max-width:850px;
+
+}
+
+
+/*==================================================
+HEADER
+==================================================*/
+
+header{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    z-index:9999;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+header .container{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    height:82px;
+
+}
+
+.logo{
+
+    color:var(--green-dark);
+
+    font-size:1.5rem;
+
+    font-weight:700;
+
+    line-height:1.1;
+
+}
+
+.logo span{
+
+    display:block;
+
+    font-size:.85rem;
+
+    color:var(--gold);
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+    font-weight:400;
+
+}
+
+
+/*==================================================
+NAVIGATION
+==================================================*/
+
+#navigation{
+
+    display:flex;
+
+    gap:2rem;
+
+    align-items:center;
+
+}
+
+#navigation a{
+
+    position:relative;
+
+    font-weight:500;
+
+    transition:var(--transition);
+
+}
+
+#navigation a:hover{
+
+    color:var(--green);
+
+}
+
+#navigation a.active{
+
+    color:var(--green-dark);
+
+}
+
+#navigation a.active::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-8px;
+
+    width:100%;
+
+    height:2px;
+
+    background:var(--gold);
+
+}
+
+#menuButton{
+
+    display:none;
+
+    background:none;
+
+    font-size:2rem;
+
+    color:var(--green-dark);
+
+}
+
+
+/*==================================================
+MAIN PAGE SYSTEM
+==================================================*/
+
+main{
+
+    padding-top:82px;
+
+}
+
+.page{
+
+    display:none;
+
+    animation:fadePage .5s ease;
+
+}
+
+.page.active-page{
+
+    display:block;
+
+}
+
+
+/*==================================================
+BUTTONS
+==================================================*/
+
+.button{
+
+    display:inline-block;
+
+    padding:15px 34px;
+
+    background:var(--green);
+
+    color:white;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.button:hover{
+
+    background:var(--green-dark);
+
+    transform:translateY(-3px);
+
+}
+
+.button.outline{
+
+    background:transparent;
+
+    border:2px solid white;
+
+    color:white;
+
+}
+
+.button.outline:hover{
+
+    background:white;
+
+    color:var(--green-dark);
+
+}
+
+
+/*==================================================
+HEADINGS
+==================================================*/
+
+h2{
+
+    font-size:2.8rem;
+
+    text-align:center;
+
+    color:var(--green-dark);
+
+    margin-bottom:20px;
+
+}
+
+.divider{
+
+    width:80px;
+
+    height:4px;
+
+    background:var(--gold);
+
+    margin:0 auto 45px;
+
+    border-radius:999px;
+
+}
+
+.intro{
+
+    max-width:760px;
+
+    margin:0 auto 60px;
+
+    text-align:center;
+
+    color:var(--grey);
+
+}
+
+
+/*==================================================
+HOME HERO
+==================================================*/
+
+.hero{
+
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 20px;
+
+    background:
+
+        linear-gradient(
+
+        rgba(30,48,36,.45),
+
+        rgba(30,48,36,.60)
+
+        ),
+
+        url("https://i.ibb.co/3y2kvfwv/fields.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+}
+
+.hero-card{
+
+    width:min(720px,92%);
+
+    background:rgba(255,255,255,.22);
+
+    backdrop-filter:blur(20px);
+
+    -webkit-backdrop-filter:blur(20px);
+
+    border:1px solid rgba(255,255,255,.35);
+
+    border-radius:28px;
+
+    padding:55px;
+
+    text-align:center;
+
+    color:white;
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.30);
+
+}
+
+.hero-logo{
+
+    width:220px;
+
+    height:auto;
+
+    margin:0 auto 30px;
+
+    border-radius:18px;
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.25);
+
+}
+
+.hero-card h1{
+
+    font-size:4.3rem;
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    margin-bottom:15px;
+
+}
+
+.hero-card h1 span{
+
+    display:block;
+
+    margin-top:10px;
+
+    font-size:1.4rem;
+
+    letter-spacing:5px;
+
+    font-weight:300;
+
+    text-transform:uppercase;
+
+}
+
+.tagline{
+
+    margin-top:25px;
+
+    font-size:1.35rem;
+
+    color:rgba(255,255,255,.95);
+
+}
+
+.stars{
+
+    margin:30px 0 15px;
+
+    color:#FFD54F;
+
+    letter-spacing:8px;
+
+    font-size:2rem;
+
+}
+
+.since{
+
+    opacity:.95;
+
+}
+
+.hero-buttons{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+/*==================================================
+ANIMATIONS
+==================================================*/
+
+@keyframes fadePage{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*==================================================
+ HOME PAGE
+==================================================*/
+
+/*----------------------------------
+Feature Strip
+----------------------------------*/
+
+.home-features{
+
+    background:#fff;
+
+    padding:70px 0;
+
+}
+
+.feature-strip{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.strip-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    padding:28px;
+
+    background:white;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.strip-item:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.strip-icon{
+
+    width:65px;
+
+    height:65px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#edf5ef;
+
+    font-size:1.8rem;
+
+    flex-shrink:0;
+
+}
+
+.strip-item h3{
+
+    color:var(--green-dark);
+
+    margin-bottom:5px;
+
+}
+
+.strip-item p{
+
+    color:var(--grey);
+
+    font-size:.95rem;
+
+}
+
+
+/*----------------------------------
+Home Highlights
+----------------------------------*/
+
+.home-highlights{
+
+    background:var(--cream);
+
+    padding:90px 0;
+
+}
+
+.highlight-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+    align-items:stretch;
+
+}
+
+.highlight-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.highlight-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.highlight-card h2{
+
+    text-align:left;
+
+    margin-bottom:18px;
+
+    font-size:2rem;
+
+}
+
+.highlight-card h3{
+
+    margin-bottom:15px;
+
+    color:var(--green-dark);
+
+}
+
+.highlight-card p{
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+}
+
+.highlight-card ul{
+
+    margin:20px 0 35px;
+
+    padding-left:20px;
+
+}
+
+.highlight-card li{
+
+    margin-bottom:12px;
+
+}
+
+.highlight-card .button{
+
+    margin-top:auto;
+
+    align-self:flex-start;
+
+}
+
+.home-cat{
+
+    width:100%;
+
+    height:230px;
+
+    object-fit:cover;
+
+    border-radius:18px;
+
+    margin:25px 0;
+
+}
+
+#homeCatName{
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+
+/*----------------------------------
+Welcome Section
+----------------------------------*/
+
+.welcome{
+
+    background:white;
+
+    padding:90px 0;
+
+}
+
+.welcome-box{
+
+    max-width:850px;
+
+    margin:auto;
+
+    padding:60px;
+
+    text-align:center;
+
+    background:var(--cream);
+
+    border-radius:24px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.welcome-box h2{
+
+    margin-bottom:25px;
+
+}
+
+.welcome-box p{
+
+    margin-bottom:20px;
+
+    color:var(--grey);
+
+    line-height:1.9;
+
+}
+
+.welcome-buttons{
+
+    margin-top:35px;
+
+}
+
+
+/*==================================================
+ ABOUT
+==================================================*/
+
+#about{
+
+    background:var(--cream);
+
+    padding:90px 0;
+
+}
+
+#about p{
+
+    margin-bottom:24px;
+
+    color:var(--grey);
+
+    line-height:1.9;
+
+}
+
+.feature-grid{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+    gap:30px;
+
+}
+
+.feature{
+
+    background:white;
+
+    padding:40px 30px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.feature:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.feature-icon{
+
+    width:80px;
+
+    height:80px;
+
+    margin:0 auto 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#edf5ef;
+
+    border-radius:50%;
+
+    font-size:2rem;
+
+}
+
+.feature h3{
+
+    margin-bottom:15px;
+
+    color:var(--green-dark);
+
+}
+
+.feature p{
+
+    margin:0;
+
+}
+
+
+/*==================================================
+ OUR CATTERY
+==================================================*/
+
+#accommodation{
+
+    background:white;
+
+    padding:90px 0;
+
+}
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+    margin-top:50px;
+
+}
+
+.card{
+
+    overflow:hidden;
+
+    background:var(--cream);
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.card-image{
+
+    height:250px;
+
+    overflow:hidden;
+
+}
+
+.card-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.5s;
+
+}
+
+.card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.card h3{
+
+    padding:25px 25px 10px;
+
+    color:var(--green-dark);
+
+}
+
+.card p{
+
+    padding:0 25px 30px;
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+}
+
+
+/*==================================================
+ COUNTRYSIDE
+==================================================*/
+
+.countryside{
+
+    background:white;
+
+    padding:90px 0;
+
+}
+
+.countryside-card{
+
+    display:grid;
+
+    grid-template-columns:1.2fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+    background:var(--cream);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+.countryside-image img{
+
+    width:100%;
+
+    height:100%;
+
+    min-height:450px;
+
+    object-fit:cover;
+
+}
+
+.countryside-text{
+
+    padding:50px;
+
+}
+
+.countryside-text h2{
+
+    text-align:left;
+
+    margin-bottom:25px;
+
+}
+
+.countryside-text p{
+
+    margin-bottom:20px;
+
+    color:var(--grey);
+
+    line-height:1.9;
+
+}
+/*==================================================
+ PRICES
+==================================================*/
+
+#prices{
+
+    background:linear-gradient(180deg,#ffffff,var(--cream));
+
+    padding:90px 0;
+
+}
+
+.price-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:40px;
+
+    margin:60px 0;
+
+}
+
+.price-card{
+
+    background:white;
+
+    padding:50px;
+
+    text-align:center;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.price-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.price-card h3{
+
+    color:var(--green-dark);
+
+    margin-bottom:20px;
+
+}
+
+.price{
+
+    font-size:4rem;
+
+    color:var(--green);
+
+    font-weight:700;
+
+    line-height:1;
+
+}
+
+.price span{
+
+    display:block;
+
+    margin-top:12px;
+
+    font-size:1rem;
+
+    color:var(--grey);
+
+}
+
+.included{
+
+    background:white;
+
+    padding:45px;
+
+    margin-top:60px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.included h3{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.included ul{
+
+    list-style:none;
+
+}
+
+.included li{
+
+    margin-bottom:15px;
+
+    color:var(--grey);
+
+}
+
+
+/*==================================================
+REVIEWS
+==================================================*/
+
+#reviews{
+
+    background:white;
+
+    padding:90px 0;
+
+}
+
+#reviews .elfsight-app-a84dec66-1ec5-496a-a937-20f84da47a4e{
+
+    margin-top:40px;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+/*==================================================
+GALLERY
+==================================================*/
+
+#gallery{
+
+    background:var(--cream);
+
+    padding:90px 0;
+
+}
+
+.gallery-widget{
+
+    background:white;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    margin-top:40px;
+
+}
+
+
+/*==================================================
+CAT OF THE WEEK
+==================================================*/
+
+#cat{
+
+    background:var(--cream);
+
+    padding:90px 0;
+
+}
+
+.cat-week{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+    align-items:center;
+
+}
+
+.cat-photo{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.cat-photo img{
+
+    width:100%;
+
+    height:500px;
+
+    object-fit:cover;
+
+}
+
+.cat-details{
+
+    background:white;
+
+    padding:50px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.cat-details h3{
+
+    color:var(--green-dark);
+
+    margin-bottom:20px;
+
+}
+
+.cat-details p{
+
+    color:var(--grey);
+
+    line-height:1.9;
+
+    margin-bottom:30px;
+
+}
+
+
+/*==================================================
+CONTACT
+==================================================*/
+
+#contact{
+
+    background:white;
+
+    padding:90px 0;
+
+}
+
+.contact-container{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:50px;
+
+}
+
+.contact-info{
+
+    background:var(--cream);
+
+    padding:45px;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.contact-item{
+
+    margin-bottom:30px;
+
+}
+
+.contact-item h3{
+
+    color:var(--green-dark);
+
+    margin-bottom:10px;
+
+}
+
+.contact-item p{
+
+    color:var(--grey);
+
+    line-height:1.8;
+
+}
+
+.contact-item a{
+
+    color:var(--green);
+
+}
+
+.contact-buttons{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    margin-top:40px;
+
+}
+
+.map{
+
+    overflow:hidden;
+
+    border-radius:22px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.map iframe{
+
+    width:100%;
+
+    height:650px;
+
+    border:0;
+
+}
+
+
+/*==================================================
+FOOTER
+==================================================*/
+
+footer{
+
+    background:var(--green-dark);
+
+    color:white;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+}
+
+.footer-logo{
+
+    font-size:2rem;
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.footer-logo span{
+
+    display:block;
+
+    color:var(--gold);
+
+    font-size:.9rem;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    font-weight:400;
+
+}
+
+.footer-social{
+
+    margin:35px 0;
+
+}
+
+.footer-social a{
+
+    display:inline-block;
+
+    border:1px solid rgba(255,255,255,.3);
+
+    padding:12px 28px;
+
+    border-radius:999px;
+
+    transition:var(--transition);
+
+}
+
+.footer-social a:hover{
+
+    background:white;
+
+    color:var(--green-dark);
+
+}
+
+
+/*==================================================
+LIGHTBOX
+==================================================*/
+
+#lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.9);
+
+    z-index:9999;
+
+    cursor:pointer;
+
+}
+
+#lightbox.show{
+
+    display:flex;
+
+}
+
+#lightbox img{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    border-radius:20px;
+
+}
+
+
+/*==================================================
+BACK TO TOP
+==================================================*/
+
+#backTop{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:var(--green);
+
+    color:white;
+
+    font-size:1.2rem;
+
+    box-shadow:var(--shadow);
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:var(--transition);
+
+    z-index:1000;
+
+}
+
+#backTop.show{
+
+    opacity:1;
+
+    pointer-events:auto;
+
+}
+
+#backTop:hover{
+
+    background:var(--green-dark);
+
+}
+
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:1000px){
+
+.feature-strip,
+.highlight-grid,
+.cat-week,
+.contact-container,
+.countryside-card{
+
+    grid-template-columns:1fr;
+
+}
+
+.map iframe{
+
+    height:450px;
+
+}
+
+}
+
+@media(max-width:850px){
+
+#menuButton{
+
+    display:block;
+
+}
+
+#navigation{
+
+    display:none;
+
+    position:absolute;
+
+    top:82px;
+
+    left:0;
+
+    width:100%;
+
+    background:white;
+
+    flex-direction:column;
+
+    padding:30px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+}
+
+#navigation.open{
+
+    display:flex;
+
+}
+
+.hero-card{
+
+    padding:40px 25px;
+
+}
+
+.hero-logo{
+
+    width:170px;
+
+}
+
+.hero-card h1{
+
+    font-size:3rem;
+
+}
+
+.hero-buttons{
+
+    flex-direction:column;
+
+}
+
+.hero-buttons .button{
+
+    width:100%;
+
+}
+
+}
+
+@media(max-width:650px){
+
+h2{
+
+    font-size:2rem;
+
+}
+
+.feature-strip{
+
+    grid-template-columns:1fr;
+
+}
+
+.welcome-box,
+.contact-info,
+.included,
+.cat-details{
+
+    padding:30px;
+
+}
+
+.cat-photo img{
+
+    height:320px;
+
+}
+
+}
+/*==================================================
+Opening Hours
+==================================================*/
+
+.opening-hours{
+
+    margin-top:70px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:45px;
+
+    display:flex;
+
+    gap:30px;
+
+    align-items:flex-start;
+
+    box-shadow:var(--shadow);
+
+}
+
+.opening-icon{
+
+    width:90px;
+
+    height:90px;
+
+    flex-shrink:0;
+
+    border-radius:50%;
+
+    background:#edf5ef;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2.4rem;
+
+}
+
+.opening-content h3{
+
+    color:var(--green-dark);
+
+    margin-bottom:15px;
+
+    font-size:2rem;
+
+}
+
+.hours-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    margin:30px 0;
+
+}
+
+.hours-card{
+
+    background:var(--cream);
+
+    padding:25px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+}
+
+.hours-card h4{
+
+    color:var(--green-dark);
+
+    margin-bottom:10px;
+
+}
+
+.hours-card p{
+
+    margin:0;
+
+    font-size:1.1rem;
+
+    font-weight:600;
+
+}
+
+.visit-note{
+
+    margin-top:25px;
+
+    padding:18px;
+
+    background:#edf5ef;
+
+    border-left:5px solid var(--green);
+
+    border-radius:12px;
+
+    font-weight:500;
+
+}
+
+@media(max-width:750px){
+
+.opening-hours{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.opening-icon{
+
+    margin:auto;
+
+}
+
+.hours-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+}
