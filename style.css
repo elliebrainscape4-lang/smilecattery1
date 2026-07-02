@@ -729,15 +729,21 @@ Home Highlights
 
 .home-cat{
 
-    width:100%;
+    display:block;
 
-    height:230px;
+    max-width:100%;
 
-    object-fit:cover;
+    width:auto;
+
+    max-height:280px;
+
+    height:auto;
+
+    margin:25px auto;
 
     border-radius:18px;
 
-    margin:25px 0;
+    box-shadow:var(--shadow);
 
 }
 
@@ -1237,19 +1243,23 @@ CAT OF THE WEEK
 
     display:grid;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:minmax(320px,520px) 1fr;
 
-    gap:50px;
+    gap:60px;
 
-    align-items:center;
+    align-items:start;
 
 }
 
 .cat-photo{
 
-    overflow:hidden;
+    background:white;
+
+    padding:25px;
 
     border-radius:22px;
+
+    text-align:center;
 
     box-shadow:var(--shadow);
 
@@ -1257,14 +1267,19 @@ CAT OF THE WEEK
 
 .cat-photo img{
 
-    width:100%;
+    display:inline-block;
 
-    height:500px;
+    max-width:100%;
 
-    object-fit:cover;
+    width:auto;
+
+    height:auto;
+
+    max-height:650px;
+
+    border-radius:18px;
 
 }
-
 .cat-details{
 
     background:white;
@@ -1673,7 +1688,7 @@ h2{
 
 .cat-photo img{
 
-    height:320px;
+    max-height:400px;
 
 }
 
