@@ -950,23 +950,47 @@ Welcome Section
 
 }
 
+/*==================================================
+CARD IMAGES
+==================================================*/
+
 .card-image{
 
-    height:250px;
+    display:flex;
 
-    overflow:hidden;
+    justify-content:center;
+
+    align-items:center;
+
+    padding:15px;
+
+    background:#f8f8f8;
 
 }
 
 .card-image img{
 
-    width:100%;
+    display:block;
 
-    height:100%;
+    width:auto;
 
-    object-fit:cover;
+    height:auto;
 
-    transition:.5s;
+    max-width:100%;
+
+    max-height:420px;
+
+    border-radius:16px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:transform .3s ease;
+
+}
+
+.card:hover .card-image img{
+
+    transform:scale(1.03);
 
 }
 
