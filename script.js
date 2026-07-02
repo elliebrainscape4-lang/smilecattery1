@@ -312,3 +312,65 @@ if(year){
     year.textContent=new Date().getFullYear();
 
 }
+
+/*==================================================
+LIGHTBOX
+==================================================*/
+
+const galleryLinks = document.querySelectorAll(".gallery-image");
+const lightbox = document.getElementById("lightbox");
+const lightboxImage = document.getElementById("lightboxImage");
+const lightboxClose = document.getElementById("lightboxClose");
+
+galleryLinks.forEach(link => {
+
+    link.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        lightboxImage.src = this.href;
+        lightboxImage.alt = this.querySelector("img").alt;
+
+        lightbox.classList.add("show");
+
+        document.body.style.overflow = "hidden";
+
+    });
+
+});
+
+function closeLightbox(){
+
+    lightbox.classList.remove("show");
+
+    document.body.style.overflow = "";
+
+    setTimeout(() => {
+
+        lightboxImage.src = "";
+
+    },300);
+
+}
+
+lightboxClose.addEventListener("click", closeLightbox);
+
+lightbox.addEventListener("click", function(e){
+
+    if(e.target === lightbox){
+
+        closeLightbox();
+
+    }
+
+});
+
+document.addEventListener("keydown", function(e){
+
+    if(e.key === "Escape"){
+
+        closeLightbox();
+
+    }
+
+});
